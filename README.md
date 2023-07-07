@@ -24,6 +24,6 @@ The n in n-gram, therefore, can take any integer value. If n == 1, then we have 
 
 N-grams help us predict what is the next item in a series. For instance, if in our model we have the trigrams: "I am crazy", and "I am smart", with probabilities 0.02 and 0.01 respectively, and if we see the words "I am", then the must probable word that follows is "crazy", and therefore "I am crazy" is the best continuation (and kind of I am, so is very realistic also :D).
 
-Prediction with n-grams is theoretically based on [Markov chains](https://en.wikipedia.org/wiki/Markov_chain). The main hypothesis is that the probability of some event happening, depends exclusively on the state form the previous event.
+The theory behind next word prediction with n-grams is based on [Markov chains](https://en.wikipedia.org/wiki/Markov_chain). The main hypothesis is that the probability of some event happening, depends exclusively on the state from the previous event. In this case the previous event is seeing the first n-1 words on an n-gram, and the event we want to predict is seeing the n<sup>th</sup> word. In the example, the previous event is the words "I am", and event to predict is wether we will have "crazy" or "smart". Markov chains is a simplification to this complex problem, so it is not perfect at all, but it works nicely in practice.
 
-If you are interested in learning how to build a simple Generative Language Model using n-grams, check [this](ngram-glm-sample.md).
+If you are interested in learning how to build a simple Generative Language Model using n-grams, check [this](ngram-glm-sample.ipynb).

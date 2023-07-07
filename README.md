@@ -17,7 +17,7 @@ And it is more interesting because language models let us make predictions on wh
 
 So far we have mentioned bigrams, that are part of a more general family called the n-grams. N-grams are one of the historical basis for *next-word prediction*, and it is simple enough as to let us show the technical principle behind current LLMs.
 
-# N-gram
+## N-gram
 An n-gram is a sequence on n consecutive items (or grammatical elements) in a text. Those items can be words, characters or tokens in general, where token is an arbitrary unit you define with an identified meaning. Normally we talk about words or characters.
 
 The n in n-gram, therefore, can take any integer value. If n == 1, then we have a unigram, if n == 2, then we have a bigram, and so forth.
@@ -26,4 +26,18 @@ N-grams help us predict what is the next item in a series. For instance, if in o
 
 The theory behind next word prediction with n-grams is based on [Markov chains](https://en.wikipedia.org/wiki/Markov_chain). The main hypothesis is that the probability of some event happening, depends exclusively on the state from the previous event. In this case the previous event is seeing the first n-1 words off an n-gram, and the event we want to predict is seeing the n<sup>th</sup> word. In the example, the previous event is the words "I am", and the event to predict is whether we will have "crazy" or "smart". Markov chains is a simplification to such a complex problem, so it is not perfect at all, but it works nicely in practice.
 
-If you are interested in learning how to build a simple Generative Language Model using n-grams, check [this Google Colab](ngram-glm-sample.ipynb).
+If you are interested in learning how to build a simple Generative Language Model using n-grams, check [this Google Colab notebook](ngram-glm-sample.ipynb).
+
+So far so good. It's been very simple and comprehensible I hope, but real world models are quite a complex stuff, so we need more. The next step in building language models is quite a big one: Word Embeddings, to extract the meaning of words, and neural networks to process and build the models. 
+
+## Word Embeddings
+
+A language model works with words, but words on themselves are not easily manageable. It would be a lot better if we could work with numbers. The next step then is to give words a numerical representation and meaning.
+
+For doing this we use high dimensional vectors that we put into a matrix that will represent our dictionary. Each word will have a position in the matrix, and it's meaning will be given by the vector values. The closer the meaning of two words, the closer their vector values.
+
+This meaning is given according to the context of the word throughout the text, so, the dataset used to build the word embedding has a big influence here.
+
+...What???...
+
+Ok. Let's go for a little example

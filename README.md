@@ -26,7 +26,7 @@ N-grams help us predict what is the next item in a series. For instance, if in o
 
 The theory behind next word prediction with n-grams is based on [Markov chains](https://en.wikipedia.org/wiki/Markov_chain). The main hypothesis is that the probability of some event happening, depends exclusively on the state from the previous event. In this case the previous event is seeing the first n-1 words off an n-gram, and the event we want to predict is seeing the n<sup>th</sup> word. In the example, the previous event is the words "I am", and the event to predict is whether we will have "crazy" or "smart". Markov chains is a simplification to such a complex problem, so it is not perfect at all, but it works nicely in practice.
 
-If you are interested in learning how to build a simple Generative Language Model using n-grams, check [this Google Colab notebook](ngram-glm-sample.ipynb).
+If you are interested in learning how to build a simple Generative Language Model using n-grams, check [this Google Colab notebook](ngram_glm_sample.ipynb).
 
 So far so good. It's been very simple and comprehensible I hope, but real world models are quite a complex stuff, so we need more. The next step in building language models is quite a big one: Word Embeddings, to extract the meaning of words, and neural networks to process and build the models. 
 
